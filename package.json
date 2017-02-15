@@ -1,0 +1,34 @@
+{
+  "name": "chilepay",
+  "version": "0.1.0",
+  "description": "Chilepay SDK module for Payments integration",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chilepay/sdk-nodejs.git"
+  },
+  "keywords": [
+    "api",
+    "chilepay",
+    "checkout",
+    "payment",
+    "pagos",
+    "chile",
+    "sdk",
+    "integration"
+  ],
+  "author": "Rodrigo González <rodrigo@chilepay.cl>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/chilepay/sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/chilepay/sdk-nodejs#readme"
+}
