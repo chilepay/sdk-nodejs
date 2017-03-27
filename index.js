@@ -1,3 +1,5 @@
-/**
- * Created by rodrigo on 14-02-17.
- */
+
+
+const sdk = require('lib/chilepay-sdk');
+
+module.exports = sdk;
