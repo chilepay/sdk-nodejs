@@ -1,6 +1,6 @@
 {
-  "name": "chilepay",
-  "version": "0.1.1",
+  "name": "chilepay-sdk",
+  "version": "0.1.2",
   "description": "Chilepay SDK module for Payments integration",
   "main": "index.js",
   "dependencies": {

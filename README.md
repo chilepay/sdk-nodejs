@@ -32,7 +32,7 @@ cp.initTransaction({
     urlNotify: 'https://example.com/notificacion',
     urlReturn: 'https://example.com/tienda'
 }).then((response) => {
-    res.redirect(response.url);
+    res.redirect(response.urlRedirection);
 });
 ```
 
