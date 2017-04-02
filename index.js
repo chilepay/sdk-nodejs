@@ -1,5 +1,9 @@
 
 
-const sdk = require('./lib/chilepay-sdk');
+const Chilepay = require('./lib/chilepay-sdk');
 
-module.exports = sdk;
+/**
+ *
+ * @type {Chilepay}
+ */
+module.exports = Chilepay;

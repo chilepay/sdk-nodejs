@@ -43,17 +43,17 @@ la información de la transacción. Posteriormente retorna tu firma con
 ```javascript
 // en https://example.com/notificacion
 
-let transactionId = res.params.transactionId;
+let transactionId = req.params.transactionId;
 
 cp.getTransaction(transactionId).then((transaction) => {
     
-    // Aquí debes fijarte en transaction.status, si es "pre_approved" entonces
+    // Aquí debes fijarte en transaction.status, si es "preApproved" entonces
     // debes actualizar tu base de datos y disminuir stock. La transacción
     // se considerará aprobada solo si retornas tu firma.
     
-    let signature = cp.makeNotificationResponse(transaction);
+    let notificationResponse = cp.makeNotificationResponse(transaction);
     
-    res.send(signature);
+    res.send(notificationResponse);
     
 });
 ```
