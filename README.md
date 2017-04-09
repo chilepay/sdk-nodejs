@@ -25,7 +25,7 @@ Para obtener tu `{apiKey}` y `{secretKey}` debes activar Desarrollador Chilepay
 
 ```javascript
 cp.initTransaction({
-    type: 'webpay',
+    using: 'webpay',
     amount: 10000,
     currency: 'clp',
     buyerEmail: 'comprador@example.com',
