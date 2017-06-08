@@ -25,14 +25,15 @@ Para obtener tu `{apiKey}` y `{secretKey}` debes activar Desarrollador Chilepay
 
 ```javascript
 cp.initTransaction({
+    subject: 'Mi primera transacción',
+    buyerEmail: 'comprador@example.com',
     using: 'webpay',
     amount: 10000,
     currency: 'clp',
-    buyerEmail: 'comprador@example.com',
-    urlNotify: 'https://example.com/notificacion',
-    urlReturn: 'https://example.com/tienda'
+    notifyUrl: 'https://example.com/notificacion',
+    returnUrl: 'https://example.com/tienda'
 }).then((response) => {
-    res.redirect(response.urlRedirection);
+    res.redirect(response.paymentUrl);
 });
 ```
 
