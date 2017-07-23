@@ -37,8 +37,8 @@ cp.initTransaction('webpay', {
 ```
 
 2. Al recibir la notificación, llama a `.getTransaction("{token}")` para obtener 
-la información de la transacción. Posteriormente retorna tu firma con 
-`.makeNotificationResponse(transaction)`
+la información de la transacción. Finalmente, retorna `transaction.checkCode`
+
 
 ```javascript
 // en https://example.com/notificacion
@@ -49,11 +49,9 @@ cp.getTransaction(transactionId).then((transaction) => {
     
     // Aquí debes fijarte en transaction.status, si es "preApproved" entonces
     // debes actualizar tu base de datos y disminuir stock. La transacción
-    // se considerará aprobada solo si retornas tu firma.
+    // se considerará aprobada solo si retornas transaction.checkCode
     
-    let notificationResponse = cp.makeNotificationResponse(transaction);
-    
-    res.send(notificationResponse);
+    res.send(transaction.checkCode);
     
 });
 ```
